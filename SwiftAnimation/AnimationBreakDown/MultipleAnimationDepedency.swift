@@ -24,7 +24,7 @@ struct MultipleAnimationDepedency: View {
     var body: some View {
         VStack {
             Circle()
-                .fill(.blue)
+                .fill(animated ? .blue : .red)
                 .frame(width: 50, height: 50)
                 .offset(x: animated ? 0 : 100, y: animated ? -40 : 0)
                 .scaleEffect(size)

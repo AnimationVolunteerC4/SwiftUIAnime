@@ -14,16 +14,33 @@ struct WithoutTransition: View {
         VStack {
             Spacer()
             Text("Hello")
-            if show {
-                Text("World")
-                    .transition(.slide) // animatable view (wrapped in)
-            }
+            
+//            if show {
+//                Text("World")
+//                    .transition(.slide)
+//            } Directly without contained in a wrapped will make transition behave wrong in the insertion
+            
+//            To make it work correctly the inserted view must be wrapped
+//            VStack {
+//                if show {
+//                    Text("World")
+//                        .transition(.slide)
+//
+//                }
+//            }
+//            .animation(.linear(duration:1), value: show)
+            
             Spacer()
             Button(show ? "Hide" : "Show") {
+//                withAnimation {
+//                    show.toggle()
+//                }
+                
                 show.toggle()
             }
         }
-//        .animation(.linear(duration:3), value: show) // create dependency association, set timing curve function
+//        Placing animation modifier at the right view tree is important to get the expected transition
+//        .animation(.linear(duration:1), value: show)
         .frame(height: 300)
     }
 }
