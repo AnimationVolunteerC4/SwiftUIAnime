@@ -7,41 +7,10 @@
 
 import SwiftUI
 
-struct RectangleSize {
-    static let width: CGFloat = 60
-    static var halfWidth: CGFloat {
-        width / 2
-    }
-    
-    static let height: CGFloat = 60
-    static var halfHeight: CGFloat {
-        height / 2
-    }
-}
-
-struct AnimatedState {
-    var before: String
-    var after: String
-    
-    var beforeVal:CGFloat {
-        if let n = NumberFormatter().number(from: before) {
-            return CGFloat(truncating: n)
-        }
-        
-        return CGFloat(0)
-    }
-    var afterVal:CGFloat {
-        if let n = NumberFormatter().number(from: after) {
-            return CGFloat(truncating: n)
-        }
-        
-        return CGFloat(0)
-    }
-}
-
 struct AnimationPlaygroundScreen: View {
     @State var animated = false
-    @State var position = AnimatedState(before: "0", after: "100")
+    @State var rectangle = RectangleState()
+    @State var positionX = AnimatedState()
     
     var body: some View {
         GeometryReader { geo in
@@ -50,13 +19,13 @@ struct AnimationPlaygroundScreen: View {
                     Rectangle()
                         .fill(.black)
                         .frame(
-                            width: RectangleSize.width,
-                            height: RectangleSize.height
+                            width: rectangle.widthVal,
+                            height: rectangle.heightVal
                         )
                         .position(
                             CGPoint(
-                                x: animated ? position.afterVal : position.beforeVal,
-                                y: RectangleSize.halfHeight
+                                x: animated ? positionX.afterVal : positionX.beforeVal,
+                                y: rectangle.halfHeight
                             )
                         )
                         .animation(.linear, value: animated)
@@ -65,11 +34,34 @@ struct AnimationPlaygroundScreen: View {
                 .background(.blue)
                 
                 VStack {
-                    C4NumberField(number: $position.before, placeholder: "120", label: "Position Before")
                     
-                    C4NumberField(number: $position.after, placeholder: "120", label: "Position After")
                 }
+                
+                HStack {
+                    Text("Before")
+                    
+                    Spacer()
+                    
+                    Image(systemName: "arrow.right")
+                    
+                    Spacer()
+                    
+                    Text("After")
+                }
+                .fontWeight(.bold)
                 .padding(.horizontal)
+                
+                HStack {
+                    VStack {
+                        C4NumberField(number: $positionX.before, placeholder: "120", label: "Position X")
+                    }
+                    .padding(.horizontal)
+                    
+                    VStack {
+                        C4NumberField(number: $positionX.after, placeholder: "120", label: "Position X")
+                    }
+                    .padding(.horizontal)
+                }
                 
                 Button {
                     animated.toggle()
