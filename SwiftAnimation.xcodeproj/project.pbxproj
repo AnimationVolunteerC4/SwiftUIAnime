@@ -19,6 +19,18 @@
 		4E73EC2A2A3F5F790005B951 /* AnimatableWay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E73EC292A3F5F790005B951 /* AnimatableWay.swift */; };
 		4EAA97EE2A4062CF00162934 /* WithoutTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAA97ED2A4062CF00162934 /* WithoutTransition.swift */; };
 		4EAA97F02A4063FD00162934 /* ExtensionAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAA97EF2A4063FD00162934 /* ExtensionAnimation.swift */; };
+		4EAF41ED2A44922D00592420 /* AnimatedValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF41EC2A44922D00592420 /* AnimatedValue.swift */; };
+		4EAF41EF2A44943D00592420 /* AnimatedShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF41EE2A44943D00592420 /* AnimatedShape.swift */; };
+		4EAF41F22A44959200592420 /* AnimatedValue+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF41F12A44959200592420 /* AnimatedValue+Extension.swift */; };
+		4EAF41F42A4495AD00592420 /* AnimatedShape+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF41F32A4495AD00592420 /* AnimatedShape+Extension.swift */; };
+		4EAF41F72A4495F100592420 /* RectangleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF41F62A4495F100592420 /* RectangleState.swift */; };
+		4EAF41F92A44960700592420 /* AnimatedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF41F82A44960700592420 /* AnimatedState.swift */; };
+		4EAF41FD2A44A8E200592420 /* C4Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF41FC2A44A8E200592420 /* C4Slider.swift */; };
+		4EF6D5812A447BB900210E6A /* AnimationPlaygroundScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6D5802A447BB900210E6A /* AnimationPlaygroundScreen.swift */; };
+		4EF6D5832A447BF100210E6A /* AnimationDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6D5822A447BF100210E6A /* AnimationDisplayView.swift */; };
+		4EF6D5852A447C1F00210E6A /* ModifierSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6D5842A447C1F00210E6A /* ModifierSettingsView.swift */; };
+		4EF6D5872A447C3C00210E6A /* TimeAlgoSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6D5862A447C3C00210E6A /* TimeAlgoSettingsView.swift */; };
+		4EF6D5892A44866900210E6A /* C4NumberFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6D5882A44866900210E6A /* C4NumberFieldView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +48,18 @@
 		4EAA97EB2A4057EF00162934 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		4EAA97ED2A4062CF00162934 /* WithoutTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithoutTransition.swift; sourceTree = "<group>"; };
 		4EAA97EF2A4063FD00162934 /* ExtensionAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionAnimation.swift; sourceTree = "<group>"; };
+		4EAF41EC2A44922D00592420 /* AnimatedValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedValue.swift; sourceTree = "<group>"; };
+		4EAF41EE2A44943D00592420 /* AnimatedShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedShape.swift; sourceTree = "<group>"; };
+		4EAF41F12A44959200592420 /* AnimatedValue+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimatedValue+Extension.swift"; sourceTree = "<group>"; };
+		4EAF41F32A4495AD00592420 /* AnimatedShape+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimatedShape+Extension.swift"; sourceTree = "<group>"; };
+		4EAF41F62A4495F100592420 /* RectangleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleState.swift; sourceTree = "<group>"; };
+		4EAF41F82A44960700592420 /* AnimatedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedState.swift; sourceTree = "<group>"; };
+		4EAF41FC2A44A8E200592420 /* C4Slider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C4Slider.swift; sourceTree = "<group>"; };
+		4EF6D5802A447BB900210E6A /* AnimationPlaygroundScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationPlaygroundScreen.swift; sourceTree = "<group>"; };
+		4EF6D5822A447BF100210E6A /* AnimationDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationDisplayView.swift; sourceTree = "<group>"; };
+		4EF6D5842A447C1F00210E6A /* ModifierSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifierSettingsView.swift; sourceTree = "<group>"; };
+		4EF6D5862A447C3C00210E6A /* TimeAlgoSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeAlgoSettingsView.swift; sourceTree = "<group>"; };
+		4EF6D5882A44866900210E6A /* C4NumberFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C4NumberFieldView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +100,11 @@
 		4E27D8892A3C5EDF00C4C115 /* SwiftAnimation */ = {
 			isa = PBXGroup;
 			children = (
+				4EAF41EB2A44920D00592420 /* Procotols */,
+				4EAF41F02A44945B00592420 /* Extensions */,
+				4EAF41F52A4495CE00592420 /* Models */,
+				4EF6D57F2A447B2200210E6A /* Screens */,
+				4EF6D57E2A447B0800210E6A /* Views */,
 				4E27D88A2A3C5EDF00C4C115 /* SwiftAnimationApp.swift */,
 				4E27D88C2A3C5EDF00C4C115 /* ContentView.swift */,
 				4E3FC4382A3E10A40054AFC3 /* AnimationBreakDown */,
@@ -115,6 +144,53 @@
 				4E080E0F2A430BB8007D2D8F /* WithTransition.swift */,
 			);
 			path = TransitionBreakDown;
+			sourceTree = "<group>";
+		};
+		4EAF41EB2A44920D00592420 /* Procotols */ = {
+			isa = PBXGroup;
+			children = (
+				4EAF41EC2A44922D00592420 /* AnimatedValue.swift */,
+				4EAF41EE2A44943D00592420 /* AnimatedShape.swift */,
+			);
+			path = Procotols;
+			sourceTree = "<group>";
+		};
+		4EAF41F02A44945B00592420 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4EAF41F12A44959200592420 /* AnimatedValue+Extension.swift */,
+				4EAF41F32A4495AD00592420 /* AnimatedShape+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		4EAF41F52A4495CE00592420 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4EAF41F62A4495F100592420 /* RectangleState.swift */,
+				4EAF41F82A44960700592420 /* AnimatedState.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4EF6D57E2A447B0800210E6A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4EF6D5822A447BF100210E6A /* AnimationDisplayView.swift */,
+				4EF6D5842A447C1F00210E6A /* ModifierSettingsView.swift */,
+				4EF6D5862A447C3C00210E6A /* TimeAlgoSettingsView.swift */,
+				4EF6D5882A44866900210E6A /* C4NumberFieldView.swift */,
+				4EAF41FC2A44A8E200592420 /* C4Slider.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4EF6D57F2A447B2200210E6A /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				4EF6D5802A447BB900210E6A /* AnimationPlaygroundScreen.swift */,
+			);
+			path = Screens;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -187,14 +263,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EAF41EF2A44943D00592420 /* AnimatedShape.swift in Sources */,
+				4EAF41F92A44960700592420 /* AnimatedState.swift in Sources */,
+				4EF6D5892A44866900210E6A /* C4NumberFieldView.swift in Sources */,
 				4EAA97F02A4063FD00162934 /* ExtensionAnimation.swift in Sources */,
+				4EAF41ED2A44922D00592420 /* AnimatedValue.swift in Sources */,
+				4EAF41F22A44959200592420 /* AnimatedValue+Extension.swift in Sources */,
+				4EF6D5872A447C3C00210E6A /* TimeAlgoSettingsView.swift in Sources */,
 				4E080E142A430DE5007D2D8F /* ViewIdentifier.swift in Sources */,
+				4EF6D5852A447C1F00210E6A /* ModifierSettingsView.swift in Sources */,
+				4EAF41FD2A44A8E200592420 /* C4Slider.swift in Sources */,
 				4E73EC282A3F5BF20005B951 /* MultipleAnimationDepedency.swift in Sources */,
+				4EAF41F72A4495F100592420 /* RectangleState.swift in Sources */,
+				4EF6D5812A447BB900210E6A /* AnimationPlaygroundScreen.swift in Sources */,
 				4E3FC43C2A3E10C90054AFC3 /* WithoutAnimation.swift in Sources */,
 				4E27D88D2A3C5EDF00C4C115 /* ContentView.swift in Sources */,
+				4EF6D5832A447BF100210E6A /* AnimationDisplayView.swift in Sources */,
 				4E3FC43E2A3E11500054AFC3 /* WithAnimation.swift in Sources */,
 				4E27D88B2A3C5EDF00C4C115 /* SwiftAnimationApp.swift in Sources */,
 				4EAA97EE2A4062CF00162934 /* WithoutTransition.swift in Sources */,
+				4EAF41F42A4495AD00592420 /* AnimatedShape+Extension.swift in Sources */,
 				4E73EC2A2A3F5F790005B951 /* AnimatableWay.swift in Sources */,
 				4E080E102A430BB8007D2D8F /* WithTransition.swift in Sources */,
 			);
