@@ -25,6 +25,7 @@
 		4EAF41F42A4495AD00592420 /* AnimatedShape+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF41F32A4495AD00592420 /* AnimatedShape+Extension.swift */; };
 		4EAF41F72A4495F100592420 /* RectangleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF41F62A4495F100592420 /* RectangleState.swift */; };
 		4EAF41F92A44960700592420 /* AnimatedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF41F82A44960700592420 /* AnimatedState.swift */; };
+		4EAF41FD2A44A8E200592420 /* C4Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF41FC2A44A8E200592420 /* C4Slider.swift */; };
 		4EF6D5812A447BB900210E6A /* AnimationPlaygroundScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6D5802A447BB900210E6A /* AnimationPlaygroundScreen.swift */; };
 		4EF6D5832A447BF100210E6A /* AnimationDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6D5822A447BF100210E6A /* AnimationDisplayView.swift */; };
 		4EF6D5852A447C1F00210E6A /* ModifierSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6D5842A447C1F00210E6A /* ModifierSettingsView.swift */; };
@@ -53,6 +54,7 @@
 		4EAF41F32A4495AD00592420 /* AnimatedShape+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AnimatedShape+Extension.swift"; sourceTree = "<group>"; };
 		4EAF41F62A4495F100592420 /* RectangleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleState.swift; sourceTree = "<group>"; };
 		4EAF41F82A44960700592420 /* AnimatedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedState.swift; sourceTree = "<group>"; };
+		4EAF41FC2A44A8E200592420 /* C4Slider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C4Slider.swift; sourceTree = "<group>"; };
 		4EF6D5802A447BB900210E6A /* AnimationPlaygroundScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationPlaygroundScreen.swift; sourceTree = "<group>"; };
 		4EF6D5822A447BF100210E6A /* AnimationDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationDisplayView.swift; sourceTree = "<group>"; };
 		4EF6D5842A447C1F00210E6A /* ModifierSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifierSettingsView.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				4EF6D5842A447C1F00210E6A /* ModifierSettingsView.swift */,
 				4EF6D5862A447C3C00210E6A /* TimeAlgoSettingsView.swift */,
 				4EF6D5882A44866900210E6A /* C4NumberFieldView.swift */,
+				4EAF41FC2A44A8E200592420 /* C4Slider.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 				4EF6D5872A447C3C00210E6A /* TimeAlgoSettingsView.swift in Sources */,
 				4E080E142A430DE5007D2D8F /* ViewIdentifier.swift in Sources */,
 				4EF6D5852A447C1F00210E6A /* ModifierSettingsView.swift in Sources */,
+				4EAF41FD2A44A8E200592420 /* C4Slider.swift in Sources */,
 				4E73EC282A3F5BF20005B951 /* MultipleAnimationDepedency.swift in Sources */,
 				4EAF41F72A4495F100592420 /* RectangleState.swift in Sources */,
 				4EF6D5812A447BB900210E6A /* AnimationPlaygroundScreen.swift in Sources */,

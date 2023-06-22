@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension AnimatedValue {
+extension AnimatedValue where State == String {
     var beforeVal: CGFloat {
         if let n = NumberFormatter().number(from: before) {
             return CGFloat(truncating: n)
@@ -22,5 +22,15 @@ extension AnimatedValue {
         }
         
         return CGFloat(0)
+    }
+}
+
+extension AnimatedValue where State == CGFloat {
+    var beforeVal: CGFloat {
+        before
+    }
+    
+    var afterVal:CGFloat {
+       after
     }
 }

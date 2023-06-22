@@ -8,9 +8,8 @@
 import SwiftUI
 
 protocol AnimatedValue {
-    var before: String { get set }
-    var after: String { get set }
+    associatedtype State
     
-    var beforeVal: CGFloat { get }
-    var afterVal: CGFloat { get }
+    var before: State { get set }
+    var after: State { get set }
 }

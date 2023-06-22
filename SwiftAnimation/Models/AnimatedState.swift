@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AnimatedState: AnimatedValue {
-    var before: String = "0"
-    var after: String = "100"
+struct AnimatedState<State>: AnimatedValue {
+    var before: State
+    var after: State
 }
