@@ -16,6 +16,9 @@ struct AnimationPlaygroundScreen: View {
     @State var opacity = AnimatedState<CGFloat>(before: 1, after: 1)
     @State var offsetX = AnimatedState(before: "0", after: "0")
     @State var offsetY = AnimatedState(before: "0", after: "0")
+    @State var rotation = AnimatedState(before: "0", after: "0")
+    @State var blur = AnimatedState<CGFloat>(before: 0, after: 0)
+    @State var color:Color = .black
     
     var body: some View {
         GeometryReader { geo in
@@ -23,16 +26,28 @@ struct AnimationPlaygroundScreen: View {
             let frameHeight = geo.size.height * (1/3)
             
             VStack(spacing: 20) {
-                HStack {
-                    Text("Frame width: **\(frameWidth.formatted())**")
-                    Text("Frame width: **\(frameHeight.formatted())**")
+                VStack {
+                    HStack {
+                        Text("Frame width: **\(frameWidth.formatted())**")
+                        Text("Frame height: **\(frameHeight.formatted())**")
+                    }
+                    
+                    HStack {
+                        Text("Rectangle width: **\(rectangle.widthVal.formatted())**")
+                        Text("Rectangle height: **\(rectangle.heightVal.formatted())**")
+                    }
                 }
+                
                 AnimationDisplayView {
                     Rectangle()
-                        .fill(.black)
+                        .fill(color)
                         .frame(
                             width: rectangle.widthVal,
                             height: rectangle.heightVal
+                        )
+                        .scaleEffect(animated ? scale.afterVal : scale.beforeVal)
+                        .rotationEffect(
+                            .degrees(animated ? rotation.afterVal : rotation.beforeVal)
                         )
                         .position(
                             CGPoint(
@@ -44,26 +59,15 @@ struct AnimationPlaygroundScreen: View {
                             x: animated ? offsetX.afterVal : offsetX.beforeVal,
                             y: animated ? offsetY.afterVal : offsetX.beforeVal
                         )
-                        .scaleEffect(animated ? scale.afterVal : scale.beforeVal)
+                        .blur(
+                            radius: animated ? blur.afterVal : blur.beforeVal
+                        )
                         .opacity(animated ? opacity.afterVal : opacity.beforeVal)
                         .animation(.linear, value: animated)
                 }
                 .frame(width: frameWidth, height: frameHeight)
                 .background(.blue)
                 .clipped()
-                
-                Section {
-                    HStack {
-                        C4NumberField(number: $rectangle.width, placeholder: "120", label: "Width")
-                        
-                        C4NumberField(number: $rectangle.height, placeholder: "120", label: "Height")
-                    }
-                } header: {
-                    Text("Rectangle Size")
-                        .fontWeight(.bold)
-                }
-                .padding(.horizontal)
-                
                 
                 Section {
                     HStack {
@@ -82,6 +86,18 @@ struct AnimationPlaygroundScreen: View {
                     
                     ScrollView {
                         VStack {
+                            HStack {
+                                C4NumberField(number: $scale.before, placeholder: "1", label: "Scale")
+                                
+                                C4NumberField(number: $scale.after, placeholder: "1.2", label: "Scale")
+                            }
+                            
+                            HStack {
+                                C4NumberField(number: $rotation.before, placeholder: "360", label: "Rotation")
+                                
+                                C4NumberField(number: $rotation.after, placeholder: "180", label: "Rotation")
+                            }
+                            
                             HStack {
                                 C4NumberField(number: $positionX.before, placeholder: "120", label: "Position X")
                                 
@@ -107,15 +123,15 @@ struct AnimationPlaygroundScreen: View {
                             }
                             
                             HStack {
-                                C4NumberField(number: $scale.before, placeholder: "1", label: "Scale")
-                                
-                                C4NumberField(number: $scale.after, placeholder: "1.2", label: "Scale")
-                            }
-                            
-                            HStack {
                                 C4Slider(value: $opacity.before, label: "Opacity")
                                 
                                 C4Slider(value: $opacity.after, label: "Opacity")
+                            }
+                            
+                            HStack {
+                                C4Slider(value: $blur.before, label: "Blur", range: 0...30)
+                                
+                                C4Slider(value: $blur.after, label: "Blur", range: 0...30)
                             }
                         }
                         .padding(.horizontal)
@@ -128,21 +144,13 @@ struct AnimationPlaygroundScreen: View {
                 
                 Button {
                     animated.toggle()
+                    color = .white
                 } label: {
                     Text(animated ? "Revert" : "Animate")
                 }
                 .buttonStyle(
                     .borderedProminent
                 )
-
-//
-//                ModifierSettingsView()
-//                    .frame(width: geo.size.width,height: geo.size.height * (1/4))
-//                    .background(.yellow)
-//
-//                TimeAlgoSettingsView()
-//                    .frame(width: geo.size.width,height: geo.size.height * (1/4))
-//                    .background(.green)
             }
         }
     }
