@@ -9,6 +9,9 @@ import SwiftUI
 
 struct AnimationPlaygroundScreen: View {
     @State var animated = false
+    @State var color: Color = .black
+    @State var timeAlgo:TimeAlgo = .linear
+    @State var configuration = GeneralConfiguration(duration: "1", response: "1", dampingFraction: "1", speed: "1", delay: "0", repeatCount: "1", repeatForever: false)
     @State var rectangle = RectangleState()
     @State var positionX = AnimatedState(before: "196", after: "196")
     @State var positionY = AnimatedState(before: "125", after: "125")
@@ -18,8 +21,7 @@ struct AnimationPlaygroundScreen: View {
     @State var offsetY = AnimatedState(before: "0", after: "0")
     @State var rotation = AnimatedState(before: "0", after: "0")
     @State var blur = AnimatedState<CGFloat>(before: 0, after: 0)
-    @State var color:Color = .black
-    
+   
     var body: some View {
         GeometryReader { geo in
             let frameWidth = geo.size.width
@@ -63,11 +65,20 @@ struct AnimationPlaygroundScreen: View {
                             radius: animated ? blur.afterVal : blur.beforeVal
                         )
                         .opacity(animated ? opacity.afterVal : opacity.beforeVal)
-                        .animation(.linear, value: animated)
+                        .animation(.getAnimation(timeAlgo: timeAlgo, configuration: configuration), value: animated)
                 }
                 .frame(width: frameWidth, height: frameHeight)
                 .background(.blue)
                 .clipped()
+                
+                Section {
+                        VStack {
+                            C4NumberField(number: $configuration.speed, placeholder: "1", label: "Speed")
+                        }
+                        .padding(.horizontal)
+                } header: {
+                   
+                }
                 
                 Section {
                     HStack {
@@ -141,10 +152,8 @@ struct AnimationPlaygroundScreen: View {
                         .fontWeight(.bold)
                 }
 
-                
                 Button {
                     animated.toggle()
-                    color = .white
                 } label: {
                     Text(animated ? "Revert" : "Animate")
                 }
