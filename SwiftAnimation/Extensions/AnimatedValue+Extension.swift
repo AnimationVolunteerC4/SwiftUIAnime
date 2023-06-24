@@ -5,7 +5,7 @@
 //  Created by Bisma Mahendra I Dewa Gede on 22/06/23.
 //
 
-import Foundation
+import SwiftUI
 
 extension AnimatedValue where State == String {
     var beforeVal: CGFloat {
@@ -32,5 +32,15 @@ extension AnimatedValue where State == CGFloat {
     
     var afterVal:CGFloat {
        after
+    }
+}
+
+extension AnimatedValue where State == FillColor {
+    var beforeVal: Color {
+        Color.getFillColor(fillColor: before)
+    }
+    
+    var afterVal: Color {
+        Color.getFillColor(fillColor: after)
     }
 }
