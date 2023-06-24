@@ -7,8 +7,12 @@
 
 import SwiftUI
 
-enum TimeAlgo {
+enum TimeAlgo: String, CaseIterable {
     case linear, easeIn, easeOut, easeInOut, spring
+}
+
+enum Repeat {
+    case forever, count, none
 }
 
 struct GeneralConfiguration: AnimationConfiguration {
@@ -24,12 +28,12 @@ struct GeneralConfiguration: AnimationConfiguration {
     
     var repeatCount: String
     
-    var repeatForever: Bool
+    var repeatMode: Repeat
 }
 
 extension Animation {
     static func getAnimation(timeAlgo: TimeAlgo, configuration: GeneralConfiguration) -> Animation {
-        if configuration.repeatForeverVal {
+        if configuration.repeatModeVal == .forever {
             switch timeAlgo {
             case .linear:
                 return Animation
@@ -66,7 +70,9 @@ extension Animation {
                     .speed(configuration.speedVal)
                     .repeatForever()
             }
-        } else {
+        }
+        
+        else if configuration.repeatModeVal == .count  {
             switch timeAlgo {
             case .linear:
                 return Animation
@@ -102,6 +108,40 @@ extension Animation {
                     .delay(configuration.delayVal)
                     .speed(configuration.speedVal)
                     .repeatCount(configuration.repeatCountVal)
+            }
+        }
+        
+        else {
+            switch timeAlgo {
+            case .linear:
+                return Animation
+                    .linear(duration: configuration.durationVal)
+                    .delay(configuration.delayVal)
+                    .speed(configuration.speedVal)
+                
+            case .easeIn:
+                return Animation
+                    .easeIn(duration: configuration.durationVal)
+                    .delay(configuration.delayVal)
+                    .speed(configuration.speedVal)
+                
+            case .easeOut:
+                return Animation
+                    .easeOut(duration: configuration.durationVal)
+                    .delay(configuration.delayVal)
+                    .speed(configuration.speedVal)
+                
+            case .easeInOut:
+                return Animation
+                    .easeInOut(duration: configuration.durationVal)
+                    .delay(configuration.delayVal)
+                    .speed(configuration.speedVal)
+                
+            case .spring:
+                return Animation
+                    .spring(response: configuration.responseVal, dampingFraction: configuration.dampingFractionVal)
+                    .delay(configuration.delayVal)
+                    .speed(configuration.speedVal)
             }
         }
     }

@@ -10,25 +10,25 @@ import SwiftUI
 struct AnimationPlaygroundScreen: View {
     @State var animated = false
     @State var color: Color = .black
-    @State var timeAlgo:TimeAlgo = .linear
-    @State var configuration = GeneralConfiguration(duration: "1", response: "1", dampingFraction: "1", speed: "1", delay: "0", repeatCount: "1", repeatForever: false)
+    @State var timeAlgo: TimeAlgo = .spring
+    @State var configuration = GeneralConfiguration(duration: "1", response: "1", dampingFraction: "1", speed: "1", delay: "0", repeatCount: "1", repeatMode: .count)
     @State var rectangle = RectangleState()
     @State var positionX = AnimatedState(before: "196", after: "196")
     @State var positionY = AnimatedState(before: "125", after: "125")
     @State var scale = AnimatedState(before: "1", after: "1")
-    @State var opacity = AnimatedState<CGFloat>(before: 1, after: 1)
     @State var offsetX = AnimatedState(before: "0", after: "0")
     @State var offsetY = AnimatedState(before: "0", after: "0")
     @State var rotation = AnimatedState(before: "0", after: "0")
     @State var blur = AnimatedState<CGFloat>(before: 0, after: 0)
+    @State var opacity = AnimatedState<CGFloat>(before: 1, after: 1)
    
     var body: some View {
         GeometryReader { geo in
             let frameWidth = geo.size.width
             let frameHeight = geo.size.height * (1/3)
             
-            VStack(spacing: 20) {
-                VStack {
+            VStack(spacing: 12) {
+                VStack() {
                     HStack {
                         Text("Frame width: **\(frameWidth.formatted())**")
                         Text("Frame height: **\(frameHeight.formatted())**")
@@ -72,10 +72,52 @@ struct AnimationPlaygroundScreen: View {
                 .clipped()
                 
                 Section {
-                        VStack {
-                            C4NumberField(number: $configuration.speed, placeholder: "1", label: "Speed")
+                    HStack {
+                        C4Picker(
+                            value: $timeAlgo,
+                            segmented: true,
+                            label: "Time Algo"
+                        ) {
+                            Group {
+                                ForEach(TimeAlgo.allCases, id: \.self) { item in
+                                    Text("\(item.rawValue)").tag(item)
+                                }
+                            }
                         }
-                        .padding(.horizontal)
+                        .pickerStyle(.segmented)
+                    }
+                    .padding(.horizontal)
+                    
+                    HStack {
+                        if timeAlgo == .spring {
+                            C4NumberField(number: $configuration.response, placeholder: "1", label: "Response")
+                            
+                            C4NumberField(number: $configuration.dampingFraction, placeholder: "1", label: "Damping Fraction")
+                        } else {
+                            C4NumberField(number: $configuration.duration, placeholder: "1", label: "Duration")
+                        }
+                    }
+                    .padding(.horizontal)
+                    
+                    HStack(alignment: .bottom) {
+                        C4NumberField(number: $configuration.speed, placeholder: "1", label: "Speed")
+                        
+                        C4NumberField(number: $configuration.delay, placeholder: "0", label: "Delay")
+                        
+                        C4Picker(value: $configuration.repeatMode, label: "Repeat") {
+                            Group {
+                                Text("None").tag(Repeat.none)
+                                Text("Count").tag(Repeat.count)
+                                Text("Forever").tag(Repeat.forever)
+                            }
+                        }
+                        
+                        if configuration.repeatMode == .count {
+                            C4NumberField(number: $configuration.repeatCount, placeholder: "1", label: "")
+                                .frame(maxWidth: 40)
+                        }
+                    }
+                    .padding(.horizontal)
                 } header: {
                    
                 }
@@ -148,8 +190,8 @@ struct AnimationPlaygroundScreen: View {
                         .padding(.horizontal)
                     }
                 } header: {
-                    Text("Modifier Settings")
-                        .fontWeight(.bold)
+//                    Text("Modifier Settings")
+//                        .fontWeight(.bold)
                 }
 
                 Button {

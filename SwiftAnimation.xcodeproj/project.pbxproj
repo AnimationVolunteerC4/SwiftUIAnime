@@ -29,6 +29,7 @@
 		4EAF41F72A4495F100592420 /* RectangleState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF41F62A4495F100592420 /* RectangleState.swift */; };
 		4EAF41F92A44960700592420 /* AnimatedState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF41F82A44960700592420 /* AnimatedState.swift */; };
 		4EAF41FD2A44A8E200592420 /* C4Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF41FC2A44A8E200592420 /* C4Slider.swift */; };
+		4EB6776D2A473B74003407B4 /* C4Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB6776C2A473B74003407B4 /* C4Picker.swift */; };
 		4EF6D5812A447BB900210E6A /* AnimationPlaygroundScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6D5802A447BB900210E6A /* AnimationPlaygroundScreen.swift */; };
 		4EF6D5832A447BF100210E6A /* AnimationDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6D5822A447BF100210E6A /* AnimationDisplayView.swift */; };
 		4EF6D5852A447C1F00210E6A /* ModifierSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6D5842A447C1F00210E6A /* ModifierSettingsView.swift */; };
@@ -61,6 +62,7 @@
 		4EAF41F62A4495F100592420 /* RectangleState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleState.swift; sourceTree = "<group>"; };
 		4EAF41F82A44960700592420 /* AnimatedState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedState.swift; sourceTree = "<group>"; };
 		4EAF41FC2A44A8E200592420 /* C4Slider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C4Slider.swift; sourceTree = "<group>"; };
+		4EB6776C2A473B74003407B4 /* C4Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C4Picker.swift; sourceTree = "<group>"; };
 		4EF6D5802A447BB900210E6A /* AnimationPlaygroundScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationPlaygroundScreen.swift; sourceTree = "<group>"; };
 		4EF6D5822A447BF100210E6A /* AnimationDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationDisplayView.swift; sourceTree = "<group>"; };
 		4EF6D5842A447C1F00210E6A /* ModifierSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifierSettingsView.swift; sourceTree = "<group>"; };
@@ -190,6 +192,7 @@
 				4EF6D5862A447C3C00210E6A /* TimeAlgoSettingsView.swift */,
 				4EF6D5882A44866900210E6A /* C4NumberFieldView.swift */,
 				4EAF41FC2A44A8E200592420 /* C4Slider.swift */,
+				4EB6776C2A473B74003407B4 /* C4Picker.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -274,6 +277,7 @@
 			files = (
 				4EAF41EF2A44943D00592420 /* AnimatedShape.swift in Sources */,
 				4E7902FE2A45B7980091BCB2 /* Animation+Extension.swift in Sources */,
+				4EB6776D2A473B74003407B4 /* C4Picker.swift in Sources */,
 				4E7903022A45C2B20091BCB2 /* AnimationConfiguration+Extension.swift in Sources */,
 				4EAF41F92A44960700592420 /* AnimatedState.swift in Sources */,
 				4EF6D5892A44866900210E6A /* C4NumberFieldView.swift in Sources */,

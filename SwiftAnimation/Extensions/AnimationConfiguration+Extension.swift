@@ -53,10 +53,10 @@ extension AnimationConfiguration {
             return Int(truncating: n)
         }
         
-        return Int(0)
+        return Int(1)
     }
     
-    var repeatForeverVal: Bool {
-       return repeatForever
+    var repeatModeVal: Repeat {
+       return repeatMode
     }
 }

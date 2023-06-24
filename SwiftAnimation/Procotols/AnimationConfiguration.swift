@@ -14,5 +14,5 @@ protocol AnimationConfiguration {
     var delay: String { get set }
     var speed: String { get set }
     var repeatCount: String { get set }
-    var repeatForever: Bool { get set }
+    var repeatMode: Repeat { get set }
 }
