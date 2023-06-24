@@ -7,11 +7,14 @@
 
 import SwiftUI
 
+enum FillColor: String, CaseIterable {
+    case red, orange, yellow, green, mint, teal, cyan, blue, indigo, purple, pink, brown, white, gray, black, clear
+}
+
 struct AnimationPlaygroundScreen: View {
     @State var animated = false
-    @State var color: Color = .black
-    @State var timeAlgo: TimeAlgo = .spring
-    @State var configuration = GeneralConfiguration(duration: "1", response: "1", dampingFraction: "1", speed: "1", delay: "0", repeatCount: "1", repeatMode: .count)
+    @State var timeAlgo: TimeAlgo = .linear
+    @State var configuration = GeneralConfiguration(duration: "1", response: "1", dampingFraction: "1", speed: "1", delay: "0", repeatCount: "1", repeatMode: .none)
     @State var rectangle = RectangleState()
     @State var positionX = AnimatedState(before: "196", after: "196")
     @State var positionY = AnimatedState(before: "125", after: "125")
@@ -21,6 +24,7 @@ struct AnimationPlaygroundScreen: View {
     @State var rotation = AnimatedState(before: "0", after: "0")
     @State var blur = AnimatedState<CGFloat>(before: 0, after: 0)
     @State var opacity = AnimatedState<CGFloat>(before: 1, after: 1)
+    @State var fillColor = AnimatedState<FillColor>(before: .black, after: .black)
    
     var body: some View {
         GeometryReader { geo in
@@ -42,7 +46,7 @@ struct AnimationPlaygroundScreen: View {
                 
                 AnimationDisplayView {
                     Rectangle()
-                        .fill(color)
+                        .fill(animated ? fillColor.afterVal : fillColor.beforeVal)
                         .frame(
                             width: rectangle.widthVal,
                             height: rectangle.heightVal
@@ -139,6 +143,24 @@ struct AnimationPlaygroundScreen: View {
                     
                     ScrollView {
                         VStack {
+                            HStack {
+                                C4Picker(value: $fillColor.before, label: "Fill Color") {
+                                    Group {
+                                        ForEach(FillColor.allCases, id: \.self) { item in
+                                            Text(item.rawValue).tag(item)
+                                        }
+                                    }
+                                }
+                                
+                                C4Picker(value: $fillColor.after, label: "Fill Color") {
+                                    Group {
+                                        ForEach(FillColor.allCases, id: \.self) { item in
+                                            Text(item.rawValue).tag(item)
+                                        }
+                                    }
+                                }
+                            }
+                            
                             HStack {
                                 C4NumberField(number: $scale.before, placeholder: "1", label: "Scale")
                                 
