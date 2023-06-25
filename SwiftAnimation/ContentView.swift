@@ -12,7 +12,8 @@ struct ContentView: View {
     @State var size = 1.0
     
     var body: some View {
-        AnimatableWay()
+        AnimationPlaygroundScreen()
+            .preferredColorScheme(.light)
     }
 }
 
