@@ -22,7 +22,7 @@ struct C4NumberField: View {
             Text(label)
             
             TextField(placeholder, text: $debouncedText)
-                .keyboardType(.numberPad)
+                .keyboardType(.decimalPad)
                 .padding(10)
                 .background(
                     RoundedRectangle(cornerRadius: 0)
@@ -45,6 +45,11 @@ struct C4NumberField: View {
         }
         .onAppear{
             debouncedText = number
+        }
+        .onChange(of: number) { newValue in
+            if debouncedText != number {
+                debouncedText = number
+            }
         }
     }
 }

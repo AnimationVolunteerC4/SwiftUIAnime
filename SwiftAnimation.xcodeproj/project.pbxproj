@@ -31,6 +31,7 @@
 		4EAF41FD2A44A8E200592420 /* C4Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF41FC2A44A8E200592420 /* C4Slider.swift */; };
 		4EB6776D2A473B74003407B4 /* C4Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB6776C2A473B74003407B4 /* C4Picker.swift */; };
 		4EB6776F2A4744CE003407B4 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB6776E2A4744CE003407B4 /* Color+Extension.swift */; };
+		4EE795B72A49E1E400874DEA /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE795B62A49E1E400874DEA /* View+Extension.swift */; };
 		4EF6D5812A447BB900210E6A /* AnimationPlaygroundScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6D5802A447BB900210E6A /* AnimationPlaygroundScreen.swift */; };
 		4EF6D5832A447BF100210E6A /* AnimationDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6D5822A447BF100210E6A /* AnimationDisplayView.swift */; };
 		4EF6D5852A447C1F00210E6A /* ModifierSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6D5842A447C1F00210E6A /* ModifierSettingsView.swift */; };
@@ -65,6 +66,7 @@
 		4EAF41FC2A44A8E200592420 /* C4Slider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C4Slider.swift; sourceTree = "<group>"; };
 		4EB6776C2A473B74003407B4 /* C4Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C4Picker.swift; sourceTree = "<group>"; };
 		4EB6776E2A4744CE003407B4 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		4EE795B62A49E1E400874DEA /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		4EF6D5802A447BB900210E6A /* AnimationPlaygroundScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationPlaygroundScreen.swift; sourceTree = "<group>"; };
 		4EF6D5822A447BF100210E6A /* AnimationDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationDisplayView.swift; sourceTree = "<group>"; };
 		4EF6D5842A447C1F00210E6A /* ModifierSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModifierSettingsView.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				4E7902FD2A45B7980091BCB2 /* Animation+Extension.swift */,
 				4E7903012A45C2B20091BCB2 /* AnimationConfiguration+Extension.swift */,
 				4EB6776E2A4744CE003407B4 /* Color+Extension.swift */,
+				4EE795B62A49E1E400874DEA /* View+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				4EAA97EE2A4062CF00162934 /* WithoutTransition.swift in Sources */,
 				4EAF41F42A4495AD00592420 /* AnimatedShape+Extension.swift in Sources */,
 				4E73EC2A2A3F5F790005B951 /* AnimatableWay.swift in Sources */,
+				4EE795B72A49E1E400874DEA /* View+Extension.swift in Sources */,
 				4E080E102A430BB8007D2D8F /* WithTransition.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
