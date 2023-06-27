@@ -9,9 +9,14 @@ import SwiftUI
 
 @main
 struct SwiftAnimationApp: App {
+    @StateObject var useCaseNavigation = UseCaseNavigationManager()
+    
+    @State private var selectedTab: NavigationTabs = .playground
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            C4TabView(selectedTab: $selectedTab, useCaseNavigation: useCaseNavigation)
+                .preferredColorScheme(.light)
         }
     }
 }
