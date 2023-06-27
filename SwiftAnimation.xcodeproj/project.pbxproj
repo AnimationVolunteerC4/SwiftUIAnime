@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		239640492A4AE7FF00E2AEAD /* ChartCustomAnimateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239640482A4AE7FF00E2AEAD /* ChartCustomAnimateView.swift */; };
+		2396404B2A4AEAF100E2AEAD /* ChartAnimateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2396404A2A4AEAF100E2AEAD /* ChartAnimateView.swift */; };
+		2396404D2A4AEDEB00E2AEAD /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2396404C2A4AEDEB00E2AEAD /* Date+Extension.swift */; };
+		2396404F2A4AEE0B00E2AEAD /* Double+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2396404E2A4AEE0B00E2AEAD /* Double+Extension.swift */; };
+		239640512A4AEE5200E2AEAD /* ChartExampleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239640502A4AEE5200E2AEAD /* ChartExampleModel.swift */; };
 		4E080E102A430BB8007D2D8F /* WithTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E080E0F2A430BB8007D2D8F /* WithTransition.swift */; };
 		4E080E142A430DE5007D2D8F /* ViewIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E080E132A430DE5007D2D8F /* ViewIdentifier.swift */; };
 		4E27D88B2A3C5EDF00C4C115 /* SwiftAnimationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E27D88A2A3C5EDF00C4C115 /* SwiftAnimationApp.swift */; };
@@ -40,6 +45,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		239640482A4AE7FF00E2AEAD /* ChartCustomAnimateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCustomAnimateView.swift; sourceTree = "<group>"; };
+		2396404A2A4AEAF100E2AEAD /* ChartAnimateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartAnimateView.swift; sourceTree = "<group>"; };
+		2396404C2A4AEDEB00E2AEAD /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
+		2396404E2A4AEE0B00E2AEAD /* Double+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extension.swift"; sourceTree = "<group>"; };
+		239640502A4AEE5200E2AEAD /* ChartExampleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartExampleModel.swift; sourceTree = "<group>"; };
 		4E080E0F2A430BB8007D2D8F /* WithTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithTransition.swift; sourceTree = "<group>"; };
 		4E080E132A430DE5007D2D8F /* ViewIdentifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewIdentifier.swift; sourceTree = "<group>"; };
 		4E27D8872A3C5EDF00C4C115 /* SwiftAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +95,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		239640472A4AE7CB00E2AEAD /* UseCaseView */ = {
+			isa = PBXGroup;
+			children = (
+				239640482A4AE7FF00E2AEAD /* ChartCustomAnimateView.swift */,
+				2396404A2A4AEAF100E2AEAD /* ChartAnimateView.swift */,
+			);
+			path = UseCaseView;
+			sourceTree = "<group>";
+		};
 		4E080E122A430DBE007D2D8F /* StructuralBreakDown */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +196,8 @@
 				4E7903012A45C2B20091BCB2 /* AnimationConfiguration+Extension.swift */,
 				4EB6776E2A4744CE003407B4 /* Color+Extension.swift */,
 				4EE795B62A49E1E400874DEA /* View+Extension.swift */,
+				2396404C2A4AEDEB00E2AEAD /* Date+Extension.swift */,
+				2396404E2A4AEE0B00E2AEAD /* Double+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -186,6 +207,7 @@
 			children = (
 				4EAF41F62A4495F100592420 /* RectangleState.swift */,
 				4EAF41F82A44960700592420 /* AnimatedState.swift */,
+				239640502A4AEE5200E2AEAD /* ChartExampleModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -206,6 +228,7 @@
 		4EF6D57F2A447B2200210E6A /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				239640472A4AE7CB00E2AEAD /* UseCaseView */,
 				4EF6D5802A447BB900210E6A /* AnimationPlaygroundScreen.swift */,
 			);
 			path = Screens;
@@ -291,14 +314,19 @@
 				4EAF41ED2A44922D00592420 /* AnimatedValue.swift in Sources */,
 				4EAF41F22A44959200592420 /* AnimatedValue+Extension.swift in Sources */,
 				4E7903002A45B9C30091BCB2 /* AnimationConfiguration.swift in Sources */,
+				239640512A4AEE5200E2AEAD /* ChartExampleModel.swift in Sources */,
 				4EF6D5872A447C3C00210E6A /* TimeAlgoSettingsView.swift in Sources */,
 				4E080E142A430DE5007D2D8F /* ViewIdentifier.swift in Sources */,
+				239640492A4AE7FF00E2AEAD /* ChartCustomAnimateView.swift in Sources */,
+				2396404D2A4AEDEB00E2AEAD /* Date+Extension.swift in Sources */,
 				4EF6D5852A447C1F00210E6A /* ModifierSettingsView.swift in Sources */,
 				4EAF41FD2A44A8E200592420 /* C4Slider.swift in Sources */,
 				4E73EC282A3F5BF20005B951 /* MultipleAnimationDepedency.swift in Sources */,
 				4EAF41F72A4495F100592420 /* RectangleState.swift in Sources */,
 				4EF6D5812A447BB900210E6A /* AnimationPlaygroundScreen.swift in Sources */,
 				4E3FC43C2A3E10C90054AFC3 /* WithoutAnimation.swift in Sources */,
+				2396404F2A4AEE0B00E2AEAD /* Double+Extension.swift in Sources */,
+				2396404B2A4AEAF100E2AEAD /* ChartAnimateView.swift in Sources */,
 				4E27D88D2A3C5EDF00C4C115 /* ContentView.swift in Sources */,
 				4EB6776F2A4744CE003407B4 /* Color+Extension.swift in Sources */,
 				4EF6D5832A447BF100210E6A /* AnimationDisplayView.swift in Sources */,
