@@ -30,12 +30,12 @@ struct C4TabView: View {
             .tag(NavigationTabs.playground)
             
             NavigationStack(path: $useCaseNavigation.paths) {
-                ChartAnimateView()
+                UseCaseListScreen()
                     .navigationDestination(for: UseCaseRoute.self) { route in
                         switch(route) {
-                        case .chartOne:
-                            ChartCustomAnimateView()
-                        case .chartTwo:
+                        case .useCaseOne:
+                            ChartAnimateView()
+                        case .useCaseTwo:
                             ChartCustomAnimateView()
                         }
                     }

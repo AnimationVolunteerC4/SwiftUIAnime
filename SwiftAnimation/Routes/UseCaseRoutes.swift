@@ -9,8 +9,8 @@ import Combine
 import SwiftUI
 
 enum UseCaseRoute: Hashable {
-    case chartOne
-    case chartTwo
+    case useCaseOne
+    case useCaseTwo
 }
 
 class UseCaseNavigationManager: ObservableObject{
