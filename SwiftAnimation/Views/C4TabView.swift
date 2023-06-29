@@ -42,6 +42,8 @@ struct C4TabView: View {
                         case .useCaseThree:
                             HomeView()
                                 .environmentObject(Model())
+                        case .useCaseFour:
+                            ListOfAnimationView()
                         }
                     }
             }
