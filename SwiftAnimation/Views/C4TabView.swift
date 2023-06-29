@@ -13,6 +13,8 @@ enum NavigationTabs: String {
 }
 
 struct C4TabView: View {
+    @StateObject var colorTheme = ColorTheme()
+    
     @Binding var selectedTab: NavigationTabs
     
     @ObservedObject var useCaseNavigation: UseCaseNavigationManager
@@ -37,6 +39,9 @@ struct C4TabView: View {
                             ChartAnimateView()
                         case .useCaseTwo:
                             ChartCustomAnimateView()
+                        case .useCaseThree:
+                            HomeView()
+                                .environmentObject(Model())
                         }
                     }
             }
@@ -48,9 +53,10 @@ struct C4TabView: View {
                 }
             }
             .tag(NavigationTabs.useCase)
+            
             .environmentObject(useCaseNavigation)
         }
-        .preferredColorScheme(.light)
+        .preferredColorScheme(colorTheme.isDarkMode ? .dark : .light)
         .gesture(TapGesture(count: 2).onEnded {
             switch selectedTab {
             case .playground:
@@ -60,5 +66,6 @@ struct C4TabView: View {
                 break
             }
         })
+        .environmentObject(colorTheme)
     }
 }

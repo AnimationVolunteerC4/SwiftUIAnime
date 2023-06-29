@@ -2,16 +2,38 @@
 import SwiftUI
 
 struct HomeView: View {
-    @State var hasScrolled = false
+    @EnvironmentObject var model: Model
+    @EnvironmentObject var colorTheme: ColorTheme
+    
     @Namespace var namespace
+    @Namespace var namespace1
+    @Namespace var namespace2
+    @Namespace var namespace3
+    
+    @State var hasScrolled = false
     @State var show = false
     @State var showStatusBar = true
     @State var selectedID = UUID()
-    @EnvironmentObject var model: Model
+    
+    
+    func getNamespace(index:Int) -> Namespace.ID {
+        switch index {
+        case 0:
+            return namespace
+        case 1:
+            return namespace1
+        case 2:
+            return namespace2
+        case 3:
+            return namespace3
+        default:
+            return namespace
+        }
+    }
     
     var body: some View {
         ZStack {
-            Color("Background").ignoresSafeArea()
+            Color("Background").edgesIgnoringSafeArea(.all)
             
             ScrollView {
                 scrollDetection
@@ -25,15 +47,7 @@ struct HomeView: View {
                     .padding(.horizontal, 20)
                 
                 if !show {
-                    C4CourseItem(namespace: namespace, course: courses[0],show: $show)
-                        .onTapGesture {
-                            withAnimation(.openCard) {
-                                show.toggle()
-                                model.showDetails.toggle()
-                                showStatusBar = false
-                                //                                selectedID = course.id
-                            }
-                        }
+                    cards
                 }
                 
 //                LazyVGrid(columns: [GridItem(.adaptive(minimum: 300), spacing: 20)], spacing: 20) {
@@ -66,6 +80,7 @@ struct HomeView: View {
             }
         }
         .statusBar(hidden: !showStatusBar)
+        .toolbar(showStatusBar ? .visible : .hidden, for: .navigationBar)
         .onChange(of: show) { newValue in
             withAnimation(.closeCard) {
                 if newValue {
@@ -74,6 +89,9 @@ struct HomeView: View {
                     showStatusBar = true
                 }
             }
+        }
+        .onAppear {
+            colorTheme.setToDark()
         }
     }
     
@@ -128,30 +146,29 @@ struct HomeView: View {
     }
     
     var cards: some View {
-        ForEach(courses) { course in
-            C4CourseItem(namespace: namespace, course: course, show: $show)
+        ForEach(0..<courses.count, id: \.self) { index in
+            C4CourseItem(namespace: getNamespace(index: index), course: courses[index], show: $show)
                 .onTapGesture {
                     withAnimation(.openCard) {
                         show.toggle()
                         model.showDetails.toggle()
                         showStatusBar = false
-                        selectedID = course.id
+                        selectedID = courses[index].id
                     }
             }
         }
     }
     
     var detail: some View {
-        CourseView(namespace: namespace, course: courses[0], show: $show)
-//        ForEach(courses) { course in
-//            if course.id == selectedID {
-//                CourseView(namespace: namespace, course: course,show: $show)
-//                    .zIndex(1)
-//                    .transition(.asymmetric(
-//                        insertion: .opacity.animation(.easeInOut(duration: 0.1)),
-//                    removal: .opacity.animation(.easeInOut(duration: 0.3).delay(0.2))))
-//            }
-//        }
+        ForEach(0..<courses.count, id: \.self) { index in
+            if courses[index].id == selectedID {
+                CourseView(namespace: getNamespace(index: index), course: courses[index], show: $show)
+                    .zIndex(1)
+                    .transition(.asymmetric(
+                        insertion: .opacity.animation(.easeInOut(duration: 0.1)),
+                    removal: .opacity.animation(.easeInOut(duration: 0.3).delay(0.2))))
+            }
+        }
     }
 }
 

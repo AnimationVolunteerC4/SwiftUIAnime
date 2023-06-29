@@ -40,6 +40,7 @@
 		4EAF41FD2A44A8E200592420 /* C4Slider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EAF41FC2A44A8E200592420 /* C4Slider.swift */; };
 		4EB6776D2A473B74003407B4 /* C4Picker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB6776C2A473B74003407B4 /* C4Picker.swift */; };
 		4EB6776F2A4744CE003407B4 /* Color+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB6776E2A4744CE003407B4 /* Color+Extension.swift */; };
+		4ED050552A4DC6B700CE8DA0 /* ColorTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED050542A4DC6B700CE8DA0 /* ColorTheme.swift */; };
 		4EE795B72A49E1E400874DEA /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE795B62A49E1E400874DEA /* View+Extension.swift */; };
 		4EF6D5812A447BB900210E6A /* AnimationPlaygroundScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6D5802A447BB900210E6A /* AnimationPlaygroundScreen.swift */; };
 		4EF6D5832A447BF100210E6A /* AnimationDisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF6D5822A447BF100210E6A /* AnimationDisplayView.swift */; };
@@ -91,6 +92,7 @@
 		4EAF41FC2A44A8E200592420 /* C4Slider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C4Slider.swift; sourceTree = "<group>"; };
 		4EB6776C2A473B74003407B4 /* C4Picker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = C4Picker.swift; sourceTree = "<group>"; };
 		4EB6776E2A4744CE003407B4 /* Color+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Extension.swift"; sourceTree = "<group>"; };
+		4ED050542A4DC6B700CE8DA0 /* ColorTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorTheme.swift; sourceTree = "<group>"; };
 		4EE795B62A49E1E400874DEA /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
 		4EF6D5802A447BB900210E6A /* AnimationPlaygroundScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationPlaygroundScreen.swift; sourceTree = "<group>"; };
 		4EF6D5822A447BF100210E6A /* AnimationDisplayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimationDisplayView.swift; sourceTree = "<group>"; };
@@ -117,14 +119,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		239640472A4AE7CB00E2AEAD /* UseCaseView */ = {
+		239640472A4AE7CB00E2AEAD /* ChartAnimationViews */ = {
 			isa = PBXGroup;
 			children = (
 				239640482A4AE7FF00E2AEAD /* ChartCustomAnimateView.swift */,
 				2396404A2A4AEAF100E2AEAD /* ChartAnimateView.swift */,
-				4E2102F82A4C7187008A8C33 /* UseCaseListScreen.swift */,
 			);
-			path = UseCaseView;
+			path = ChartAnimationViews;
 			sourceTree = "<group>";
 		};
 		4E080E122A430DBE007D2D8F /* StructuralBreakDown */ = {
@@ -243,6 +244,7 @@
 				A1E73EDA2A4D69350020AF92 /* Course.swift */,
 				A1E73EE82A4D7C9C0020AF92 /* ScrollPreferenceKey.swift */,
 				A1E73EEA2A4D7E920020AF92 /* Model.swift */,
+				4ED050542A4DC6B700CE8DA0 /* ColorTheme.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -266,8 +268,9 @@
 		4EF6D57F2A447B2200210E6A /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				4E2102F82A4C7187008A8C33 /* UseCaseListScreen.swift */,
 				A1E73EDD2A4D6CC00020AF92 /* TransitionViews */,
-				239640472A4AE7CB00E2AEAD /* UseCaseView */,
+				239640472A4AE7CB00E2AEAD /* ChartAnimationViews */,
 				4EF6D5802A447BB900210E6A /* AnimationPlaygroundScreen.swift */,
 			);
 			path = Screens;
@@ -374,6 +377,7 @@
 				4EAF41FD2A44A8E200592420 /* C4Slider.swift in Sources */,
 				A1E73EEB2A4D7E920020AF92 /* Model.swift in Sources */,
 				4E73EC282A3F5BF20005B951 /* MultipleAnimationDepedency.swift in Sources */,
+				4ED050552A4DC6B700CE8DA0 /* ColorTheme.swift in Sources */,
 				4EAF41F72A4495F100592420 /* RectangleState.swift in Sources */,
 				A1E73EDF2A4D6D1F0020AF92 /* C4CourseItem.swift in Sources */,
 				4EF6D5812A447BB900210E6A /* AnimationPlaygroundScreen.swift in Sources */,

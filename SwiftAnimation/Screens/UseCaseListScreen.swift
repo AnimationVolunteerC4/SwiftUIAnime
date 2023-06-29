@@ -9,6 +9,7 @@ import SwiftUI
 
 struct UseCaseListScreen: View {
     @EnvironmentObject private var useCaseNavigation: UseCaseNavigationManager
+    @EnvironmentObject var colorTheme: ColorTheme
     
     var body: some View {
         VStack {
@@ -17,12 +18,16 @@ struct UseCaseListScreen: View {
             
             ScrollView {
                 VStack(spacing: 12) {
-                    C4UseCaseItem(label: "Chart One") {
+                    C4UseCaseItem(label: "Chart Animation 1") {
                         useCaseNavigation.push(to: .useCaseOne)
                     }
                     
-                    C4UseCaseItem(label: "Chart Two") {
+                    C4UseCaseItem(label: "Chart Animation 2") {
                         useCaseNavigation.push(to: .useCaseTwo)
+                    }
+                    
+                    C4UseCaseItem(label: "View Transition") {
+                        useCaseNavigation.push(to: .useCaseThree)
                     }
                 }
                 .padding(.horizontal)
@@ -30,6 +35,9 @@ struct UseCaseListScreen: View {
             }
             
             Spacer()
+        }
+        .onAppear {
+            colorTheme.setToLight()
         }
     }
 }

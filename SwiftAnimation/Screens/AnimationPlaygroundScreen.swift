@@ -12,6 +12,8 @@ enum FillColor: String, CaseIterable {
 }
 
 struct AnimationPlaygroundScreen: View {
+    @EnvironmentObject var colorTheme: ColorTheme
+    
     @State var animated = false
     @State var timeAlgo: TimeAlgo = .linear
     @State var configuration = GeneralConfiguration(duration: "1", response: "1", dampingFraction: "1", speed: "1", delay: "0", repeatCount: "1", repeatMode: .none)
@@ -253,6 +255,9 @@ struct AnimationPlaygroundScreen: View {
                     }
                 }
             }
+        }
+        .onAppear {
+            colorTheme.setToLight()
         }
     }
 }

@@ -11,6 +11,7 @@ import SwiftUI
 enum UseCaseRoute: Hashable {
     case useCaseOne
     case useCaseTwo
+    case useCaseThree
 }
 
 class UseCaseNavigationManager: ObservableObject{
