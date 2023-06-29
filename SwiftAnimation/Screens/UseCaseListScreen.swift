@@ -29,6 +29,10 @@ struct UseCaseListScreen: View {
                     C4UseCaseItem(label: "View Transition") {
                         useCaseNavigation.push(to: .useCaseThree)
                     }
+                    C4UseCaseItem(label: "Use Case of Animations") {
+                        useCaseNavigation.push(to: .useCaseFour)
+                    }
+                    
                 }
                 .padding(.horizontal)
                 .padding(.top, 10)
