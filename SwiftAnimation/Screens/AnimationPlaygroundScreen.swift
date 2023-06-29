@@ -115,7 +115,7 @@ struct AnimationPlaygroundScreen: View {
                             C4Picker(
                                 value: $timeAlgo,
                                 segmented: true,
-                                label: "Time Algo"
+                                label: "Time Curve Algorithm"
                             ) {
                                 Group {
                                     ForEach(TimeAlgo.allCases, id: \.self) { item in
