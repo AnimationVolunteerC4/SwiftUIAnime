@@ -12,11 +12,13 @@ struct SwiftAnimationApp: App {
     @StateObject var useCaseNavigation = UseCaseNavigationManager()
     
     @State private var selectedTab: NavigationTabs = .playground
+    @StateObject var model = Model()
     
     var body: some Scene {
         WindowGroup {
-            C4TabView(selectedTab: $selectedTab, useCaseNavigation: useCaseNavigation)
-                .preferredColorScheme(.light)
+//            C4TabView(selectedTab: $selectedTab, useCaseNavigation: useCaseNavigation)
+//                .preferredColorScheme(.light)
+            HomeView()
         }
     }
 }
