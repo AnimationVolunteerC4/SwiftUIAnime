@@ -16,9 +16,7 @@ struct SwiftAnimationApp: App {
     
     var body: some Scene {
         WindowGroup {
-//            C4TabView(selectedTab: $selectedTab, useCaseNavigation: useCaseNavigation)
-//                .preferredColorScheme(.light)
-            HomeView()
+            C4TabView(selectedTab: $selectedTab, useCaseNavigation: useCaseNavigation)
         }
     }
 }
