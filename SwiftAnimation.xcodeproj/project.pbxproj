@@ -54,6 +54,11 @@
 		A1E73EE92A4D7C9C0020AF92 /* ScrollPreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E73EE82A4D7C9C0020AF92 /* ScrollPreferenceKey.swift */; };
 		A1E73EEB2A4D7E920020AF92 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E73EEA2A4D7E920020AF92 /* Model.swift */; };
 		A1E73EEF2A4D7F090020AF92 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1E73EEE2A4D7F090020AF92 /* HomeView.swift */; };
+		FE329D472A4DDF2C001825E1 /* ListOfAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE329D462A4DDF2C001825E1 /* ListOfAnimationView.swift */; };
+		FE329D492A4DDF69001825E1 /* EaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE329D482A4DDF69001825E1 /* EaseView.swift */; };
+		FE329D4B2A4DDFB1001825E1 /* RegularSpringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE329D4A2A4DDFB1001825E1 /* RegularSpringView.swift */; };
+		FE329D4D2A4DE0FC001825E1 /* SpringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE329D4C2A4DE0FC001825E1 /* SpringView.swift */; };
+		FE329D4F2A4DE122001825E1 /* InterpolatingSpringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE329D4E2A4DE122001825E1 /* InterpolatingSpringView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -106,6 +111,11 @@
 		A1E73EE82A4D7C9C0020AF92 /* ScrollPreferenceKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollPreferenceKey.swift; sourceTree = "<group>"; };
 		A1E73EEA2A4D7E920020AF92 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		A1E73EEE2A4D7F090020AF92 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FE329D462A4DDF2C001825E1 /* ListOfAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfAnimationView.swift; sourceTree = "<group>"; };
+		FE329D482A4DDF69001825E1 /* EaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EaseView.swift; sourceTree = "<group>"; };
+		FE329D4A2A4DDFB1001825E1 /* RegularSpringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularSpringView.swift; sourceTree = "<group>"; };
+		FE329D4C2A4DE0FC001825E1 /* SpringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringView.swift; sourceTree = "<group>"; };
+		FE329D4E2A4DE122001825E1 /* InterpolatingSpringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterpolatingSpringView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +278,7 @@
 		4EF6D57F2A447B2200210E6A /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				FE329D452A4DDEF7001825E1 /* AnimationExample */,
 				4E2102F82A4C7187008A8C33 /* UseCaseListScreen.swift */,
 				A1E73EDD2A4D6CC00020AF92 /* TransitionViews */,
 				239640472A4AE7CB00E2AEAD /* ChartAnimationViews */,
@@ -284,6 +295,18 @@
 				A1E73EEE2A4D7F090020AF92 /* HomeView.swift */,
 			);
 			path = TransitionViews;
+			sourceTree = "<group>";
+		};
+		FE329D452A4DDEF7001825E1 /* AnimationExample */ = {
+			isa = PBXGroup;
+			children = (
+				FE329D462A4DDF2C001825E1 /* ListOfAnimationView.swift */,
+				FE329D482A4DDF69001825E1 /* EaseView.swift */,
+				FE329D4E2A4DE122001825E1 /* InterpolatingSpringView.swift */,
+				FE329D4A2A4DDFB1001825E1 /* RegularSpringView.swift */,
+				FE329D4C2A4DE0FC001825E1 /* SpringView.swift */,
+			);
+			path = AnimationExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -366,6 +389,7 @@
 				4EAA97F02A4063FD00162934 /* ExtensionAnimation.swift in Sources */,
 				A1E73EE52A4D77DD0020AF92 /* AnimatableFont+Extension.swift in Sources */,
 				4E2102FB2A4C71B1008A8C33 /* C4Toolbar.swift in Sources */,
+				FE329D472A4DDF2C001825E1 /* ListOfAnimationView.swift in Sources */,
 				4EAF41ED2A44922D00592420 /* AnimatedValue.swift in Sources */,
 				4EAF41F22A44959200592420 /* AnimatedValue+Extension.swift in Sources */,
 				4E7903002A45B9C30091BCB2 /* AnimationConfiguration.swift in Sources */,
@@ -373,6 +397,7 @@
 				4E080E142A430DE5007D2D8F /* ViewIdentifier.swift in Sources */,
 				239640492A4AE7FF00E2AEAD /* ChartCustomAnimateView.swift in Sources */,
 				2396404D2A4AEDEB00E2AEAD /* Date+Extension.swift in Sources */,
+				FE329D4B2A4DDFB1001825E1 /* RegularSpringView.swift in Sources */,
 				A1E73EEF2A4D7F090020AF92 /* HomeView.swift in Sources */,
 				4EAF41FD2A44A8E200592420 /* C4Slider.swift in Sources */,
 				A1E73EEB2A4D7E920020AF92 /* Model.swift in Sources */,
@@ -386,12 +411,15 @@
 				4E3FC43C2A3E10C90054AFC3 /* WithoutAnimation.swift in Sources */,
 				4E3EDB062A4B035000575166 /* C4TabView.swift in Sources */,
 				2396404F2A4AEE0B00E2AEAD /* Double+Extension.swift in Sources */,
+				FE329D4F2A4DE122001825E1 /* InterpolatingSpringView.swift in Sources */,
 				2396404B2A4AEAF100E2AEAD /* ChartAnimateView.swift in Sources */,
 				4EB6776F2A4744CE003407B4 /* Color+Extension.swift in Sources */,
 				4EF6D5832A447BF100210E6A /* AnimationDisplayView.swift in Sources */,
 				4E3EDB092A4B04A800575166 /* UseCaseRoutes.swift in Sources */,
 				A1E73EE92A4D7C9C0020AF92 /* ScrollPreferenceKey.swift in Sources */,
 				A1E73EE72A4D794C0020AF92 /* FeaturedItem.swift in Sources */,
+				FE329D4D2A4DE0FC001825E1 /* SpringView.swift in Sources */,
+				FE329D492A4DDF69001825E1 /* EaseView.swift in Sources */,
 				4E3FC43E2A3E11500054AFC3 /* WithAnimation.swift in Sources */,
 				4E27D88B2A3C5EDF00C4C115 /* SwiftAnimationApp.swift in Sources */,
 				4EAA97EE2A4062CF00162934 /* WithoutTransition.swift in Sources */,
