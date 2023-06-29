@@ -32,7 +32,7 @@ struct C4NumberField: View {
                     publisher.send(value)
                 }
                 .onReceive(Just(debouncedText), perform: { newValue in
-                    let filtered = newValue.filter { "-0123456789.".contains($0) }
+                    let filtered = newValue.filter { "-0123456789.,".contains($0) }
                     
                     if filtered != newValue {
                         debouncedText = filtered

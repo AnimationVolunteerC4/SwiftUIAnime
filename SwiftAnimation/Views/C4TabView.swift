@@ -47,7 +47,7 @@ struct C4TabView: View {
             }
             .tabItem {
                 Label {
-                    Text("Use Case")
+                    Text("Use Cases")
                 } icon: {
                     Image(systemName: "text.book.closed.fill")
                 }
@@ -57,15 +57,6 @@ struct C4TabView: View {
             .environmentObject(useCaseNavigation)
         }
         .preferredColorScheme(colorTheme.isDarkMode ? .dark : .light)
-        .gesture(TapGesture(count: 2).onEnded {
-            switch selectedTab {
-            case .playground:
-                break
-            case .useCase:
-                useCaseNavigation.reset()
-                break
-            }
-        })
         .environmentObject(colorTheme)
     }
 }
