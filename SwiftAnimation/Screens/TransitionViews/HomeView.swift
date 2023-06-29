@@ -3,12 +3,8 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var model: Model
-    @EnvironmentObject var colorTheme: ColorTheme
     
     @Namespace var namespace
-    @Namespace var namespace1
-    @Namespace var namespace2
-    @Namespace var namespace3
     
     @State var hasScrolled = false
     @State var show = false
@@ -16,24 +12,10 @@ struct HomeView: View {
     @State var selectedID = UUID()
     
     
-    func getNamespace(index:Int) -> Namespace.ID {
-        switch index {
-        case 0:
-            return namespace
-        case 1:
-            return namespace1
-        case 2:
-            return namespace2
-        case 3:
-            return namespace3
-        default:
-            return namespace
-        }
-    }
     
     var body: some View {
         ZStack {
-            Color("Background").edgesIgnoringSafeArea(.all)
+            Color("Background").ignoresSafeArea()
             
             ScrollView {
                 scrollDetection
@@ -45,27 +27,24 @@ struct HomeView: View {
                     .foregroundColor(.secondary)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal, 20)
+
                 
-                if !show {
-                    cards
+                LazyVGrid(columns: [GridItem(.adaptive(minimum: 300), spacing: 20)], spacing: 20) {
+                    if !show {
+                        cards
+                    } else {
+                        ForEach(courses) { course in
+                            Rectangle()
+                                .fill(.white)
+                                .frame(height: 300)
+                                .cornerRadius(30)
+                                .shadow(color: Color("Shadow"), radius: 20, x: 0, y: 10)
+                                .opacity(0.3)
+                            .padding(.horizontal, 30)
+                        }
+                    }
                 }
-                
-//                LazyVGrid(columns: [GridItem(.adaptive(minimum: 300), spacing: 20)], spacing: 20) {
-//                    if !show {
-//                        cards
-//                    } else {
-//                        ForEach(courses) { course in
-//                            Rectangle()
-//                                .fill(.white)
-//                                .frame(height: 300)
-//                                .cornerRadius(30)
-//                                .shadow(color: Color("Shadow"), radius: 20, x: 0, y: 10)
-//                                .opacity(0.3)
-//                            .padding(.horizontal, 30)
-//                        }
-//                    }
-//                }
-//                .padding(.horizontal, 20)
+                .padding(.horizontal, 20)
             }
             .coordinateSpace(name: "scroll")
             .safeAreaInset(edge: .top, content: {
@@ -90,9 +69,8 @@ struct HomeView: View {
                 }
             }
         }
-        .onAppear {
-            colorTheme.setToDark()
-        }
+        .colorScheme(.dark)
+        
     }
     
     var scrollDetection: some View {
@@ -146,23 +124,24 @@ struct HomeView: View {
     }
     
     var cards: some View {
-        ForEach(0..<courses.count, id: \.self) { index in
-            C4CourseItem(namespace: getNamespace(index: index), course: courses[index], show: $show)
+        ForEach(courses) { course in
+            C4CourseItem(namespace: namespace, course: course, show: $show)
                 .onTapGesture {
                     withAnimation(.openCard) {
                         show.toggle()
                         model.showDetails.toggle()
                         showStatusBar = false
-                        selectedID = courses[index].id
+                        selectedID = course.id
                     }
             }
         }
     }
     
     var detail: some View {
-        ForEach(0..<courses.count, id: \.self) { index in
-            if courses[index].id == selectedID {
-                CourseView(namespace: getNamespace(index: index), course: courses[index], show: $show)
+//        CourseVieww(namespace: namespace, show: $show)
+        ForEach(courses) { course in
+            if course.id == selectedID {
+                CourseView(namespace: namespace, course: course,show: $show)
                     .zIndex(1)
                     .transition(.asymmetric(
                         insertion: .opacity.animation(.easeInOut(duration: 0.1)),
