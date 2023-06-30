@@ -22,7 +22,7 @@ struct C4NumberField: View {
             Text(label)
             
             TextField(placeholder, text: $debouncedText)
-                .keyboardType(.decimalPad)
+                .keyboardType(.numbersAndPunctuation)
                 .padding(10)
                 .background(
                     RoundedRectangle(cornerRadius: 0)
