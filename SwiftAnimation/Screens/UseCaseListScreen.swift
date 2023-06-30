@@ -32,6 +32,10 @@ struct UseCaseListScreen: View {
                     C4UseCaseItem(label: "Use Case of Animations") {
                         useCaseNavigation.push(to: .useCaseFour)
                     }
+                    C4UseCaseItem(label: "Online Coffee Shop Animations") {
+                        useCaseNavigation.push(to: .useCaseFive)
+                    }
+                    
                     
                 }
                 .padding(.horizontal)

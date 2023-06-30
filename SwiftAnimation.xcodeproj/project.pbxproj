@@ -59,6 +59,8 @@
 		FE329D4B2A4DDFB1001825E1 /* RegularSpringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE329D4A2A4DDFB1001825E1 /* RegularSpringView.swift */; };
 		FE329D4D2A4DE0FC001825E1 /* SpringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE329D4C2A4DE0FC001825E1 /* SpringView.swift */; };
 		FE329D4F2A4DE122001825E1 /* InterpolatingSpringView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE329D4E2A4DE122001825E1 /* InterpolatingSpringView.swift */; };
+		FE329D722A4EA292001825E1 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE329D712A4EA292001825E1 /* Home.swift */; };
+		FE329D742A4EA2C3001825E1 /* Coffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE329D732A4EA2C3001825E1 /* Coffee.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -116,6 +118,8 @@
 		FE329D4A2A4DDFB1001825E1 /* RegularSpringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegularSpringView.swift; sourceTree = "<group>"; };
 		FE329D4C2A4DE0FC001825E1 /* SpringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpringView.swift; sourceTree = "<group>"; };
 		FE329D4E2A4DE122001825E1 /* InterpolatingSpringView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterpolatingSpringView.swift; sourceTree = "<group>"; };
+		FE329D712A4EA292001825E1 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		FE329D732A4EA2C3001825E1 /* Coffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coffee.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +282,7 @@
 		4EF6D57F2A447B2200210E6A /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				FE329D702A4EA281001825E1 /* CoffeeAnimationView */,
 				FE329D452A4DDEF7001825E1 /* AnimationExample */,
 				4E2102F82A4C7187008A8C33 /* UseCaseListScreen.swift */,
 				A1E73EDD2A4D6CC00020AF92 /* TransitionViews */,
@@ -307,6 +312,15 @@
 				FE329D4C2A4DE0FC001825E1 /* SpringView.swift */,
 			);
 			path = AnimationExample;
+			sourceTree = "<group>";
+		};
+		FE329D702A4EA281001825E1 /* CoffeeAnimationView */ = {
+			isa = PBXGroup;
+			children = (
+				FE329D712A4EA292001825E1 /* Home.swift */,
+				FE329D732A4EA2C3001825E1 /* Coffee.swift */,
+			);
+			path = CoffeeAnimationView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,6 +416,7 @@
 				4EAF41FD2A44A8E200592420 /* C4Slider.swift in Sources */,
 				A1E73EEB2A4D7E920020AF92 /* Model.swift in Sources */,
 				4E73EC282A3F5BF20005B951 /* MultipleAnimationDepedency.swift in Sources */,
+				FE329D742A4EA2C3001825E1 /* Coffee.swift in Sources */,
 				4ED050552A4DC6B700CE8DA0 /* ColorTheme.swift in Sources */,
 				4EAF41F72A4495F100592420 /* RectangleState.swift in Sources */,
 				A1E73EDF2A4D6D1F0020AF92 /* C4CourseItem.swift in Sources */,
@@ -419,6 +434,7 @@
 				A1E73EE92A4D7C9C0020AF92 /* ScrollPreferenceKey.swift in Sources */,
 				A1E73EE72A4D794C0020AF92 /* FeaturedItem.swift in Sources */,
 				FE329D4D2A4DE0FC001825E1 /* SpringView.swift in Sources */,
+				FE329D722A4EA292001825E1 /* Home.swift in Sources */,
 				FE329D492A4DDF69001825E1 /* EaseView.swift in Sources */,
 				4E3FC43E2A3E11500054AFC3 /* WithAnimation.swift in Sources */,
 				4E27D88B2A3C5EDF00C4C115 /* SwiftAnimationApp.swift in Sources */,

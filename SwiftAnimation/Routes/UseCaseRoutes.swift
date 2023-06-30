@@ -13,6 +13,7 @@ enum UseCaseRoute: Hashable {
     case useCaseTwo
     case useCaseThree
     case useCaseFour
+    case useCaseFive
 }
 
 class UseCaseNavigationManager: ObservableObject{

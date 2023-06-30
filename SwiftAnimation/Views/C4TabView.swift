@@ -44,7 +44,11 @@ struct C4TabView: View {
                                 .environmentObject(Model())
                         case .useCaseFour:
                             ListOfAnimationView()
+                        case .useCaseFive:
+                            Home()
                         }
+                        
+                        
                     }
             }
             .tabItem {
