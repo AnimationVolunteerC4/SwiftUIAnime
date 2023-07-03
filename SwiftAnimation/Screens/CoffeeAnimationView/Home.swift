@@ -13,7 +13,7 @@ struct Home: View {
     var body: some View {
         GeometryReader{
             let size = $0.size
-            let cardSize = size.width * 0.8
+            let cardSize = size.width * 1
             
             LinearGradient(colors: [
                 .clear,
